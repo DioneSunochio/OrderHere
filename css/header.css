@@ -1,0 +1,156 @@
+@import "/css/global.css";
+
+/*header*/
+.hd-container {
+  margin-top: 15px;
+}
+
+/*nav*/
+.hd-nav {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/*logo*/
+.hd-logo {
+  display: flex;
+  align-items: center;
+  width: 40%;
+}
+
+i.fa-solid.fa-clipboard-check {
+  font-size: 5rem;
+}
+
+.hd-logo > p {
+  padding-left: 5px;
+  font-size: 3rem;
+}
+
+/*hd-listpg*/
+.hd-listpg {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+  width: 60%;
+}
+
+.hd-listpg > li > a {
+  text-decoration: none;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  transition-duration: 0.5s;
+}
+
+.hd-listpg > li > a:hover {
+  color: var(--carolina-blue);
+}
+
+#hd-btn {
+  position: absolute;
+  visibility: hidden;
+}
+
+@media (max-width: 1024px) {
+  /*button*/
+  #hd-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 60px;
+    height: 35px;
+    right: 10%;
+    align-self: center;
+    background-color: transparent;
+    border-color: transparent;
+    cursor: pointer;
+    position: relative;
+    visibility: visible;
+  }
+  #hd-btn::before {
+    content: "";
+    width: 50px;
+    height: 5px;
+    background-color: var(--azure-web);
+  }
+
+  #hd-btn > span {
+    width: 50px;
+    height: 5px;
+    background-color: var(--azure-web);
+    transition-duration: 0.5s;
+  }
+
+  #hd-btn::after {
+    content: "";
+    width: 50px;
+    height: 5px;
+    background-color: var(--azure-web);
+    transition-duration: 0.5s;
+  }
+
+  /*class active*/
+
+  /*hd-btn active*/
+  #hd-btn.active::before {
+    visibility: hidden;
+  }
+
+  #hd-btn.active > span {
+    position: absolute;
+    top: 25px;
+    transform: rotate(225deg);
+  }
+
+  #hd-btn.active::after {
+    transform: rotate(-225deg);
+  }
+
+  /*hd-listpg*/
+  .hd-listpg {
+    display: block;
+    position: absolute;
+    top: 80px;
+    left: 0px;
+    height: 0;
+    background-color: rgba(0, 100, 148, 1);
+    width: 100vw;
+    padding-left: 10%;
+    overflow: hidden;
+    transition-duration: 1s;
+  }
+
+  /*hd-listpg active*/
+  .hd-listpg.active {
+    display: block;
+    position: absolute;
+    top: 80px;
+    left: 0px;
+    height: 200px;
+    background-color: rgba(0, 100, 148, 1);
+    width: 100vw;
+    padding-left: 10%;
+    overflow-y: hidden;
+  }
+
+  .hd-listpg.active > li {
+    margin-bottom: 20px;
+  }
+
+  .hd-listpg > li > a {
+    font-size: 2rem;
+  }
+
+  .hd-listpg > li > a:hover {
+    color: var(--prussian-blue);
+  }
+
+  @media (max-width: 320px) {
+    .hd-logo > p {
+      font-size: 2rem;
+    }
+  }
+}

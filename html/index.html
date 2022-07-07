@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/main.css">
+    <script src="../javascript/index.js" defer></script>
+    <script src="../javascript/createAccount.js" defer></script>
+    <script src="https://kit.fontawesome.com/1edf34a419.js" crossorigin="anonymous"></script>
+    <title>OrderHere</title>
+</head>
+
+<body>
+    <main>
+        <header class="hd-container">
+            <nav class="hd-nav">
+                <div class="hd-logo">
+                    <i class="fa-solid fa-clipboard-check"></i>
+                    <p>OrderHere</p>
+                </div>
+                <ul class="hd-listpg">
+                    <li><a href="#">home</a></li>
+                    <li><a href="#">about</a></li>
+                    <li><a href="#">requests</a></li>
+                    <li><a href="#">contacts</a></li>
+                </ul>
+                <button id="hd-btn"><span></span></button>
+            </nav>
+        </header>
+        <section id="sct-login" class="lg-container active">
+            <p>Welcome to</p>
+            <h1>OrderHere</h1>
+            <p>Your best waiter is here !</p>
+            <div class="lg-area">
+                <form class="login">
+                    <p>Login</p>
+                    <div class="login-inp">
+                        <label for="username">Name</label>
+                        <input type="text" id="username" placeholder="Type your name...">
+                    </div>
+                    <div class="login-inp">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" placeholder="Type your password...">
+                    </div>
+                    <button type="submit" id="submit" class="lg-btn-sbt">submit</button>
+                </form>
+            </div>
+            <div class="lg-create">
+                <form class="login">
+                    <p>Create Account</p>
+                    <div class="login-inp">
+                        <label for="newusername">Name</label>
+                        <input type="text" id="newusername" placeholder="Type your name...">
+                        <small></small>
+                    </div>
+                    <div class="login-inp">
+                        <label for="email">Email</label>
+                        <input type="text" id="email" placeholder="Type your email...">
+                        <small></small>
+                    </div>
+                    <div class="login-inp">
+                        <label for="password-create">Password</label>
+                        <input type="password" id="password-create" placeholder="Type your password...">
+                        <small></small>
+                    </div>
+                    <div class="login-inp">
+                        <label for="password-confirmation">Confirm Password</label>
+                        <input type="password" id="password-confirmation" placeholder="Confirm password...">
+                        <small></small>
+                    </div>
+                    <button type="submit" id="btn-create" class="lg-btn-sbt">submit</button>
+                </form>
+            </div>
+            <div id="lg-newlogin">
+                <p>Do you not have login yet ?</p>
+                <button type="button" id="lg-btn-newlg">click here</button>
+            </div>
+        </section>
+        <footer>
+            <ul id="footer">
+                <li><i class="fa-brands fa-linkedin"></i><a href="https://www.linkedin.com/in/dione-sunochio-792030237/"
+                        target="_blank">Linkedin</a></li>
+                <li><i class="fa-brands fa-github"></i><a href="https://github.com/DioneSunochio"
+                        target="_blank">GitHub</a></li>
+            </ul>
+        </footer>
+    </main>
+</body>
+
+</html>

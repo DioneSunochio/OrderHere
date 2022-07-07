@@ -1,0 +1,46 @@
+#footer {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 5px;
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+}
+
+#footer > li > i.fa-brands {
+  font-size: 3rem;
+  color: var(--prussian-blue);
+  margin-right: 5px;
+}
+
+#footer > li > a {
+  text-decoration: none;
+  font-size: 3rem;
+  font-weight: 600;
+  color: var(--prussian-blue);
+}
+
+@media (max-width: 768px) {
+  #footer > li > i.fa-brands {
+    font-size: 2rem;
+  }
+
+  #footer > li > a {
+    font-size: 2rem;
+  }
+
+  @media (max-width: 425px) {
+    #footer {
+      justify-content: space-between;
+    }
+    #footer > li > i.fa-brands {
+      font-size: 1.5rem;
+    }
+
+    #footer > li > a {
+      font-size: 1.5rem;
+      margin-right: 10px;
+    }
+  }
+}

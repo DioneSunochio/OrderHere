@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 62.5%;
+  font-family: "Poppins", sans-serif;
+  --prussian-blue: #13293d;
+  --sapphire-blue: #006494;
+  --celadon-blue: #247ba0;
+  --carolina-blue: #1b98e0;
+  --azure-web: #e8f1f2;
+  color: var(--azure-web);
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(
+    var(--prussian-blue) 20%,
+    var(--carolina-blue) 100%
+  );
+}
+
+main {
+  width: 80%;
+  margin: 0 auto;
+}
