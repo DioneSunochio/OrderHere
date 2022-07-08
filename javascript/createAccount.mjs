@@ -2,13 +2,12 @@ const newusername = document.getElementById("newusername");
 const email = document.getElementById("email");
 const passwordCreate = document.getElementById("password-create");
 const passwordConfirmation = document.getElementById("password-confirmation");
-const btnCreate = document.getElementById("btn-create");
 
 function createAccount() {
-  newusernameValue = newusername.value;
-  emailValue = email.value;
-  passwordCreateValue = passwordCreate.value;
-  passwordConfirmationValue = passwordConfirmation.value;
+  const newusernameValue = newusername.value;
+  const emailValue = email.value;
+  const passwordCreateValue = passwordCreate.value;
+  const passwordConfirmationValue = passwordConfirmation.value;
 
   if (newusernameValue === "") {
     setErrorFor(newusername, "*Username is required.");
@@ -40,10 +39,13 @@ function createAccount() {
 
   const allSmall = document.querySelectorAll("small");
   const smallInner = [...allSmall];
-  for (key of smallInner) {
-    if (key.innerHTML === "All right!") {
-      allRight(newusernameValue, emailValue, passwordCreateValue);
-    }
+
+  const filterAllRight = smallInner.filter(
+    (key) => key.innerHTML === "All right!"
+  );
+
+  if (filterAllRight.length === 4) {
+    allRight(newusernameValue, emailValue, passwordCreateValue);
   }
 }
 
@@ -75,4 +77,11 @@ function allRight(user, email, password) {
   lgCreate.classList.remove("active");
 }
 
-btnCreate.addEventListener("click", createAccount);
+const createAccountFull = {
+  createAccount,
+  setErrorFor,
+  setSuccessFor,
+  allRight,
+};
+
+export default createAccountFull;

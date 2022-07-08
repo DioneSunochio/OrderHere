@@ -6,8 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/main.css">
-    <script src="../javascript/index.js" defer></script>
-    <script src="../javascript/createAccount.js" defer></script>
+    <script type="module" src="../javascript/main.mjs" defer></script>
     <script src="https://kit.fontawesome.com/1edf34a419.js" crossorigin="anonymous"></script>
     <title>OrderHere</title>
 </head>
@@ -29,7 +28,7 @@
                 <button id="hd-btn"><span></span></button>
             </nav>
         </header>
-        <section id="sct-login" class="lg-container active">
+        <section id="sct-login" class="lg-container">
             <p>Welcome to</p>
             <h1>OrderHere</h1>
             <p>Your best waiter is here !</p>
@@ -70,7 +69,7 @@
                         <input type="password" id="password-confirmation" placeholder="Confirm password...">
                         <small></small>
                     </div>
-                    <button type="submit" id="btn-create" class="lg-btn-sbt">submit</button>
+                    <button type="button" id="btn-create" class="lg-btn-sbt">submit</button>
                 </form>
             </div>
             <div id="lg-newlogin">

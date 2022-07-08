@@ -1,8 +1,6 @@
 const hdBtn = document.getElementById("hd-btn");
 const hdlistpg = document.querySelector(".hd-listpg");
-const btnSubmit = document.getElementById("submit");
 
-const btnNewLogin = document.getElementById("lg-btn-newlg");
 const divNewLogin = document.getElementById("lg-newlogin");
 const lgArea = document.querySelector(".lg-area");
 const lgCreate = document.querySelector(".lg-create");
@@ -31,6 +29,10 @@ function checkAccount() {
   }
 }
 
-hdBtn.addEventListener("click", activehdBtn);
-btnNewLogin.addEventListener("click", newLogin);
-btnSubmit.addEventListener("click", checkAccount);
+const clickEvent = {
+  activehdBtn,
+  newLogin,
+  checkAccount,
+};
+
+export default clickEvent;
