@@ -1,7 +1,11 @@
-const newusername = document.getElementById("newusername");
-const email = document.getElementById("email");
-const passwordCreate = document.getElementById("password-create");
-const passwordConfirmation = document.getElementById("password-confirmation");
+const newusername = document.getElementById("newusername") as HTMLInputElement;
+const email = document.getElementById("email") as HTMLInputElement;
+const passwordCreate = document.getElementById(
+  "password-create"
+) as HTMLInputElement;
+const passwordConfirmation = document.getElementById(
+  "password-confirmation"
+) as HTMLInputElement;
 
 function createAccount() {
   const newusernameValue = newusername.value;
@@ -23,7 +27,7 @@ function createAccount() {
 
   if (passwordCreateValue === "") {
     setErrorFor(passwordCreate, "*Please, type your password");
-  } else if (passwordCreateValue < 8) {
+  } else if (passwordCreateValue.length < 7) {
     setErrorFor(passwordCreate, "*Your password need 8 characters.");
   } else {
     setSuccessFor(passwordCreate, "All right!");
@@ -49,24 +53,28 @@ function createAccount() {
   }
 }
 
-function setSuccessFor(input, message) {
+function setSuccessFor(input: HTMLInputElement, message: string) {
   const divInput = input.parentElement;
-  const small = divInput.querySelector("small");
+  const small = divInput?.querySelector("small");
 
-  small.innerHTML = message;
+  if (small) {
+    small.innerHTML = message;
+  }
 }
 
-function setErrorFor(input, message) {
+function setErrorFor(input: HTMLInputElement, message: string) {
   const divInput = input.parentElement;
-  const small = divInput.querySelector("small");
+  const small = divInput?.querySelector("small");
 
-  small.innerHTML = message;
+  if (small) {
+    small.innerHTML = message;
+  }
 }
 
-function allRight(user, email, password) {
-  const divNewLogin = document.getElementById("lg-newlogin");
-  const lgArea = document.querySelector(".lg-area");
-  const lgCreate = document.querySelector(".lg-create");
+function allRight(user: string, email: string, password: string) {
+  const divNewLogin = document.getElementById("lg-newlogin") as HTMLDivElement;
+  const lgArea = document.querySelector(".lg-area") as HTMLDivElement;
+  const lgCreate = document.querySelector(".lg-create") as HTMLDivElement;
 
   localStorage.setItem("user", user);
   localStorage.setItem("email", email);

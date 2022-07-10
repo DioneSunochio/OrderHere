@@ -1,0 +1,25 @@
+{
+  "name": "orderhere",
+  "version": "1.0.0",
+  "description": "Managing orders",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "lite-server",
+    "watch": "tsc --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DioneSunochio/OrderHere.git"
+  },
+  "author": "Dione Sunochio",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DioneSunochio/OrderHere/issues"
+  },
+  "homepage": "https://github.com/DioneSunochio/OrderHere#readme",
+  "devDependencies": {
+    "lite-server": "^2.6.1",
+    "typescript": "^4.7.4"
+  }
+}

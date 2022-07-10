@@ -1,6 +1,5 @@
-import createAccountFull from "./createAccount.mjs";
-import clickEvent from "./index.mjs";
-
+import createAccountFull from "./createAccount.js";
+import clickEvent from "./index.js";
 const btnCreate = document.getElementById("btn-create");
 const hdBtn = document.getElementById("hd-btn");
 const btnNewLogin = document.getElementById("lg-btn-newlg");
